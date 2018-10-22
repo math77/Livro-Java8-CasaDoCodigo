@@ -1,0 +1,46 @@
+			ANOTAÇÕES - LIVRO JAVA 8 - CASA DO CÓDIGO
+
+CAPÍTULO 2:
+  1) Arrays.asList() -> Forma simples de criar uma lista imutável.
+	
+  2) Nova forma de iterar.
+	lista.forEach(...) 
+
+	Método responsável por iterar sobre a lista em questão. Para utilizar esse novo método devemos passar como argumento um objeto do tipo 				 	 java.util.function.Consumer que possui o método accept. 
+	
+	Esse método accept é responsável por pegar um objeto que foi passado como argumento e 'consumi-lo'. Consumir é fazer alguma coisa que você queira com o 	  
+        objeto, como imprimir alguma propriedade ou realizar alguma chamada de método.
+	
+	Nós podemos criar uma classe que implemente a interface 'Consumer<Objeto>' ou como um prática mais comum fazer isso em uma classe anônima.
+	
+	Podemos utilizar lambdas para implementar interfaces que só possuem um método.
+
+	Exs.:
+	  1-Forma: Consumer<Objeto> variavel = (Objeto obj) -> {System.out.println(obj.metodo());};
+		* O compilador percebe que está atribuindo a um Consumer<Objeto> e vai tentar jogar esse código no único método que a interface define.
+	  
+	  2-Forma: Consumer<Objeto> variavel = obj -> {System.out.println(obj.metodo());};
+		* O compilador também consegue colocar o tipo, então podemos omitir os parênteses e o tipo do objeto.
+	  
+	  3-Forma: Consumer<Objeto> variavel = obj -> System.out.println(obj.metodo());
+		* Caso o código dentro das {} contenha apenas uma instrução podemos omiti-lo e remover o ponto e vírgula.
+	  
+	  Obs.: As váriaves 'obj' não devem ter sido declaradas no mesmo escopo de invocação do forEach() porque o lambda pode capturar váriaveis de fora. 	
+	
+
+CAPÍTULO 3:
+  1) Toda interface que possua apenas um método abstrato pode ser instanciada com um código lambda. Isso vale também para interfaces antigas que existam antes do 
+     Java 8.
+ 
+  2) Interfaces que possuam apenas um método abstrato agora são chamadas de interfaces funcionais e sempre podem ser instanciadas com uma expressão lambda. 
+ 
+  3) Não é necessário fazer nada de especial para uma interface ser considerada funcional porque o compilador já identifica pela sua estrutura esse tipo de interface.
+  
+  4) Podemos usar a anotação '@FunctionalInterface' para dizer que é uma interface funcional. Utilizando essa anotação caso seja colocado mais um método na 
+     interface o compilador vai retornar um erro de múltiplos métodos enquanto sem a anotação não vai se retornado nenhum erro.
+  
+  5) Lambdas só existem	quando são atribuidas a interfaces funcionais.
+
+
+CAPÍTULO 4:
+

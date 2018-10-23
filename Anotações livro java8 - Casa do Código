@@ -48,3 +48,10 @@ CAPÍTULO 4:
   3) Método andThen() pode ser usado para executar sequencialmente instâncias da interface Consumer.
   4) O método removeIf() é um novo método da Collection. Nele é possível passar um 'Predicate' que é uma interface funcional onde é possível testar objetos de 		 
      determinado tipo. Passando um 'Predicado' o método remove todos os elementos que devolverem true para esse predicado. SÓ FUNCIONA COM LISTAS MUTÁVEIS.
+
+
+CAPÍTULO 5:
+  1) Se uma classe implementa Comparable nós podemos pegar uma lista de instâncias dessa classe e passar para o Collections.sort(). 
+  2) Agora podemos ter métodos estáticos dentro de uma interface. Podemos utilizar o método comparing() da interface Comparator. Ele é responsável por retornar um       
+     Comparator que é o critério de comparação.
+  3) O uso do comparing() só funciona se passado um lambda que dado um Tipo, retorne algo comparável.

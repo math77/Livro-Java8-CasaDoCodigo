@@ -43,4 +43,8 @@ CAPÍTULO 3:
 
 
 CAPÍTULO 4:
-
+  1) Métodos com código dentro de interfaces são chamados de 'default methods'.
+  2) Uma interface funcional pode possuir mais de um método desde que eles sejam 'default methods'.
+  3) Método andThen() pode ser usado para executar sequencialmente instâncias da interface Consumer.
+  4) O método removeIf() é um novo método da Collection. Nele é possível passar um 'Predicate' que é uma interface funcional onde é possível testar objetos de 		 
+     determinado tipo. Passando um 'Predicado' o método remove todos os elementos que devolverem true para esse predicado. SÓ FUNCIONA COM LISTAS MUTÁVEIS.

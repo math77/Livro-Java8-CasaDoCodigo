@@ -55,3 +55,16 @@ CAPÍTULO 5:
   2) Agora podemos ter métodos estáticos dentro de uma interface. Podemos utilizar o método comparing() da interface Comparator. Ele é responsável por retornar um       
      Comparator que é o critério de comparação.
   3) O uso do comparing() só funciona se passado um lambda que dado um Tipo, retorne algo comparável.
+
+
+CAPÍTULO 6:
+   1) Podemos utilizar methods references para simplicar o código apenas dizendo qual método deve ser executado.
+   2) O method reference é traduzido para uma interface funcional, por esse motivo ele pode ser passado para um forEach().
+   3) Tudo é feito em tempo de compilação, sem sobrecarga para a performance.
+   4) No caso de desejarmos criar comparadores mais elaborados para as nossas aplicações, nós podemos utilizar alguns métodos defaults que estão implementados em 
+      Comparator.
+        * thenComparing() -> Passamos as formas de comparar os dados paara ele, como por exemplo ordenar por nome e se existir dois iguais, ordenar por pontos.
+        * nullsLast() -> Os nulos vão para o final e o resto é ordenado de acordo com o critério.
+	* nullsFirst() -> Os nulos vão para o início e o resto é ordenado de acordo com o critério.
+	* reversed() -> Ordenar na ordem inversa. 
+   5) Também podemos referenciar métodos que recebem argumentos.
